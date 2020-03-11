@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -N dlc_training_test
+#PBS -q gpuq
+#PBS -l nodes=1:ppn=1
+#PBS -l gpus=1
+#PBS -l feature=gpu
+#PBS -A DBIC
+#PBS -l walltime=01:30:00
+#PBS -M mark.a.taylor.20@dartmouth.edu
+#PBS -m ea
+#PBS -j oe
+cd $PBS_O_WORKDIR
+gpuNum=1
+export CUDA_DEVICE=gpuNum
+singularity exec --nv deeplabcut/sandbox_dlc/ python3 scripts/ir/vids.py /dartfs-hpc/rc/home/7/f002qw7/thesis/ir_test-markt-2020-02-28/videos/ir1.MP4 /dartfs-hpc/rc/home/7/f002qw7/thesis/ir_test-markt-2020-02-28/videos/ir2.MP4 /dartfs-hpc/rc/home/7/f002qw7/thesis/ir_test-markt-2020-02-28/videos/ir3.MP4
+exit 0
