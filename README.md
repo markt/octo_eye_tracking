@@ -9,6 +9,8 @@ Annotated video frames can then be inputed into `octo_track` for further analysi
 
 ## Usage
 
+The following guide specifically utilizes a collection of infrared data. These examples can be run just like the guide, but users will need to modify the scripts to analyze new data.
+
 ### Annotating Data
 
 Users must first use `DeepLabCut` to create a project. Users must locally annotate video frames using the provided GUI, then copy the project to *Discovery* using `scp` for training.
