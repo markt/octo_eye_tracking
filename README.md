@@ -10,6 +10,10 @@ More comprehensive documentation is needed for all of the functions, however the
 
 Example data and the data used in `example_usage.ipynb` can be found [here](https://drive.google.com/open?id=1ZaiccLkC3LYrCD31T5pk_TDLzsaNAcWl). `eye_tracking_vid.mp4` is the finalized output from the python modules and was created from `label_data.csv` and `original_video.mp4`. 
 
+## Further Work
+
+I intend to refine the network with more data in the spring, particularly to identify when the eyes are occluded. With a robust model trained, I can begin to collect data using two cameras for 3D eye-tracking. I have work to do on the repo as far as better documentation, a package structure for the python modules, additional visualization options (including visual field representation, I need to do more literature review), more numerical analyses, and incorporating in the confidence DLC provides with its predictions into my analysis.
+
 ## Usage
 
 The following guide specifically utilizes a collection of infrared data. These examples can be run just like the guide, but users will need to modify the scripts to analyze new data.
@@ -19,11 +23,6 @@ The following guide specifically utilizes a collection of infrared data. These e
 Users must first use [DeepLabCut](https://github.com/AlexEMG/DeepLabCut) to create a project. Users must locally annotate video frames using the provided GUI, then copy the project to *Discovery* using `scp` for training.
 
 See the [DeepLabCut](https://github.com/AlexEMG/DeepLabCut) documentation for project creation and data annotation.
-
-
-### Further Work
-
-I intend to refine the network with more data in the spring, particularly to identify when the eyes are occluded. With a robust model trained, I can begin to collect data using two cameras for 3D eye-tracking. I have work to do on the repo as far as better documentation, a package structure for the python modules, additional visualization options (including visual field representation, I need to do more literature review), more numerical analyses, and incorporating in the confidence DLC provides with its predictions into my analysis.
 
 
 ### Training
