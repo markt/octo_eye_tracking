@@ -8,11 +8,21 @@ Annotated video frames can then further analyzed using the python modules `data_
 
 More comprehensive documentation is needed for all of the functions, however the notebook `example_usage.ipynb` shows how users can flexibly use the package to visualize data outputted from a DLC network.
 
+## Examples
+
+Below is an example output frame from the program. The eyes and stimulus are annotated, as well as lines from the closer eye to the stimulus and from the center of the visual field of the closer eye outwards. The angle between these two lines, *theta* at the top of the image, is the angle difference (in radians) between these two lines. The smaller the angle, the more directly the octopus is viewing the stimulus.
+
+![example_image](https://github.com/markt/octo_eye_tracking/blob/master/docs/example_frame.png)
+
 Example data and the data used in `example_usage.ipynb` can be found [here](https://drive.google.com/open?id=1ZaiccLkC3LYrCD31T5pk_TDLzsaNAcWl). `eye_tracking_vid.mp4` is the finalized output from the python modules and was created from `label_data.csv` and `original_video.mp4`. 
 
 ## Further Work
 
-I intend to refine the network with more data in the spring, particularly to identify when the eyes are occluded. With a robust model trained, I can begin to collect data using two cameras for 3D eye-tracking. I have work to do on the repo as far as better documentation, a package structure for the python modules, additional visualization options (including visual field representation, I need to do more literature review), more numerical analyses, and incorporating in the confidence DLC provides with its predictions into my analysis.
+I intend to refine the network with more data in the spring, particularly to identify when the eyes are occluded. With a robust model trained, I can begin to collect data using two cameras for 3D eye-tracking.
+
+I have work to do on the repo as far as better documentation, a package structure for the python modules, additional visualization options (including visual field representation, I need to do more literature review), more numerical analyses, and incorporating in the confidence DLC provides with its predictions into my analysis.
+
+Another thing to work on is the generation of coordinates for a stimulus. While for static stimuli generating data isn't a hassle, for moving stimuli it is a pain to do manually. I could create a second network for tracking crabs, or in the case of a moving stimulus on a screen time sync the recording and stimulus presentation properly such that I can always predict where the stimulus is.
 
 ## Usage
 
